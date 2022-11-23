@@ -311,6 +311,7 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
+  ffi
   importmap-rails
   jbuilder
   letter_opener
