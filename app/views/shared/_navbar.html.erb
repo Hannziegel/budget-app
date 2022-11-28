@@ -1,0 +1,26 @@
+<div class="navbar flex">
+  <a href="/" class="nav_bar__logo icon">Menu</a>
+  <% if user_signed_in? %>
+    <ul class="nav_bar__links">
+      <div>
+        <% if current_page?(categories_path) || current_page?('/') %>
+          <h1><%= "CATEGORIES" %></h1>
+        <% end %>
+        <% if(params.has_key?(:id)) %>
+          <h1><%= "PAYMENTS" %></h1>
+        <% end %>
+      </div>
+    </ul>
+    <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "log-out-btn" %>
+  <% else %>
+    </ul>
+    <ul class="nav_bar__links">
+      <li>
+        <%= link_to 'Register', new_user_registration_path, class: "nav_bar__link" %>
+      </li>
+      <li>
+        <%= link_to 'Sign in', new_user_session_path, class: "nav_bar__link" %>
+      </li>
+    </ul>
+  <% end %>
+</div>
