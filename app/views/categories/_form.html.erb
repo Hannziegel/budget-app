@@ -1,31 +1,31 @@
-<%= form_with(model: category, class: "form") do |form| %>
-  <% if category.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+<div class="container-y">
+  <%= form_with(model: category, class: "form") do |form| %>
+    <% if category.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% category.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h1>New category</h1>
+
+    <%= form.hidden_field :user_id, value: current_user.id %>
+
+    <div>
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name %>
     </div>
-  <% end %>
 
-  <h1>New category</h1>
+    <div>
+      <%= form.label :icon, style: "display: block" %>
+      <%= form.text_field :icon %>
+    </div>
 
-  <%= form.hidden_field :user_id, value: current_user.id %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
-  </div>
-
-  <div>
     <%= form.submit class: "submit-btn" %>
-  </div>
-<% end %>
+  <% end %>
+</div>

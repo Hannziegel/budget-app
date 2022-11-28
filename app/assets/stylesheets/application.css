@@ -21,7 +21,9 @@
   --primary-main: #3778c2;
   --primary-second: #5fb523;
   --primary-text: #434b54;
-  --white: #000;
+  --body-color: #f3f3f3;
+  --black: #000;
+  --white: #fff;
   --red: rgba(233, 22, 22, 0.836);
   --font-family-main: 'Proxima Nova', sans-serif;
   --font-family-splash: 'Lobster', cursive, sans-serif;
@@ -33,6 +35,10 @@
   padding: 0;
   text-decoration: none;
   font-family: var(--font-family-main);
+}
+
+body {
+  background-color: var(--body-color);
 }
 
 main {
@@ -56,13 +62,13 @@ button {
   width: 100%;
   padding: 2vh 5vw;
   border: none;
-  background-color: #5fb523;
-  color: var(--white);
+  background-color: var(--primary-second);
+  color: var(--black);
 }
 
 a {
   align-self: center;
-  color: var(--white);
+  color: var(--black);
 }
 
 form input {
@@ -83,6 +89,7 @@ form input {
 .flex {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
   gap: 10px;
 }
@@ -90,7 +97,6 @@ form input {
 .flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
@@ -100,7 +106,7 @@ form input {
 }
 
 .container-y {
-  padding-top: 3vh;
+  padding-top: 15vh;
 }
 
 .navbar {
@@ -127,13 +133,23 @@ form input {
   padding: 20px;
   justify-content: center;
   background-color: var(--primary-second);
-  color: var(--white);
+  color: var(--black);
 }
 
 .submit-btn {
   padding: 20px;
   background-color: var(--primary-second);
+  color: var(--black);
+}
+
+.log-in-btn {
+  padding: 10px 60px;
+  background-color: var(--primary-main);
   color: var(--white);
+}
+
+.sign-up-links {
+  gap: 0;
 }
 
 .card {
@@ -146,10 +162,15 @@ form input {
 }
 
 .check-box {
-  color: var(--white);
+  color: var(--black);
 }
 
 .check-box-text {
   white-space: nowrap;
   text-size-adjust: auto;
+}
+
+.red {
+  color: var(--red);
+  font-weight: bolder;
 }

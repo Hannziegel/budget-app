@@ -11,10 +11,12 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render "shared/navbar" %>
     <main class="container">
+    <div class="flex-column">
+      <p class="notice flex red"><%= notice %></p>
+      <p class="alert flex red"><%= alert %></p>
+    </div>
       <%= yield %>
     </main>
   </body>
