@@ -1,5 +1,5 @@
-<div class="navbar flex">
-  <a href="/" class="nav_bar__logo icon">Menu</a>
+<div class="navbar flex" data-controller="toggle">
+  <a data-action="click->toggle#menu" class="home-menu">Menu</a>
   <% if user_signed_in? %>
     <ul class="nav_bar__links">
       <div>
@@ -11,7 +11,6 @@
         <% end %>
       </div>
     </ul>
-    <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "log-out-btn" %>
   <% else %>
     <div>
       <% if current_page?(new_user_session_path) || current_page?('/') %>
@@ -24,4 +23,5 @@
   <% end %>
   <div>
   </div>
+  <%= render "shared/menu" %>
 </div>

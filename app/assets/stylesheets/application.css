@@ -35,6 +35,7 @@
   padding: 0;
   text-decoration: none;
   font-family: var(--font-family-main);
+  overflow-x: hidden;
 }
 
 body {
@@ -113,6 +114,12 @@ form input {
   background-color: var(--primary-main);
   padding: 0 8vw;
   height: 10vh;
+  box-shadow: 0 2px 5px 2px var(--primary-text);
+  z-index: 10;
+}
+
+.navbar * {
+  color: var(--white);
 }
 
 .headline {
@@ -126,6 +133,7 @@ form input {
 .log-out-btn,
 .destroy-btn {
   background-color: var(--red);
+  cursor: pointer;
 }
 
 .add-btn {
@@ -173,4 +181,33 @@ form input {
 .red {
   color: var(--red);
   font-weight: bolder;
+}
+
+.side-menu {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  background-color: var(--primary-main);
+  color: white;
+  height: 90vh;
+  width: 40vw;
+}
+
+.side-menu * {
+  color: var(--white);
+}
+
+.user-photo {
+  background-color: gray;
+  box-shadow: 0 0 5px 5px var(--white);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-top: 5vh;
+}
+
+.home-menu {
+  display: block;
+  cursor: pointer;
 }

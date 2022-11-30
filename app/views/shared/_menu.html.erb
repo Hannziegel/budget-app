@@ -1,3 +1,13 @@
-<p class="welcome"> Welcome,
-  <%= current_user.name %>
-</p>
+<div data-toggle-target="menu" class="side-menu flex-column">
+  <div class="flex-column">
+    <div class="user-photo flex">
+    </div>
+    <p class="flex"> Welcome,
+      <%= current_user.name %>
+    </p>
+  </div>
+  <div class="flex">
+    <%= button_to "LOG OUT", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "log-out-btn" %>
+  </div>
+  <div></div>
+</div>
