@@ -43,7 +43,6 @@ body {
 }
 
 main {
-  padding: 10px 0;
   height: 90vh;
 }
 
@@ -102,6 +101,10 @@ form input {
   gap: 20px;
 }
 
+.alert-notice {
+  gap: 0;
+}
+
 .container {
   padding: 0 8vw;
 }
@@ -141,7 +144,7 @@ form input {
   padding: 20px;
   justify-content: center;
   background-color: var(--primary-second);
-  color: var(--black);
+  color: var(--white);
 }
 
 .submit-btn {
