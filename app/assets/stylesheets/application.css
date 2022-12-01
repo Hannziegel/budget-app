@@ -158,12 +158,14 @@ form input {
 .submit-btn {
   padding: 20px;
   background-color: var(--primary-second);
-  color: var(--black);
+  color: var(--white);
+  cursor: pointer;
 }
 
 .log-in-btn {
   padding: 10px 60px;
   background-color: var(--primary-main);
+  font-weight: 700;
   color: var(--white);
 }
 
