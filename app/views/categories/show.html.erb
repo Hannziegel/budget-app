@@ -1,18 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="flex-column all-vh container-y">
-  <div class="flex-column container">
-    <div>
+<div class="flex-column container-category-show">
+  <div class="flex-column container category-payment-cards">
+    <div class="category-payment-card">
       <%= render @category %>
       <%= button_to "Destroy this category", @category, method: :delete, class: "destroy-btn"%>
     </div>
-    <div class="flex-column container">
+    <div class="flex-column">
       <h2 class="flex"> Payments: </h2>
-      <%= render @payments %>
+      <div>
+        <%= render @payments %>
+      </div>
     </div>
   </div>
-
-
-
   <%= link_to "New payment", new_payment_path, class: "add-btn flex" %>
 </div>

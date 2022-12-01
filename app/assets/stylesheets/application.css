@@ -29,13 +29,16 @@
   --font-family-splash: 'Lobster', cursive, sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: var(--font-family-main);
-  overflow-x: hidden;
 }
 
 body {
@@ -113,6 +116,10 @@ form input {
   padding-top: 15vh;
 }
 
+.container-category-show {
+  height: 100%;
+}
+
 .navbar {
   background-color: var(--primary-main);
   padding: 0 8vw;
@@ -145,6 +152,7 @@ form input {
   justify-content: center;
   background-color: var(--primary-second);
   color: var(--white);
+  overflow-y: hidden;
 }
 
 .submit-btn {
@@ -166,10 +174,6 @@ form input {
 .card {
   padding: 20px;
   border: 2px solid black;
-}
-
-.all-vh {
-  height: 100%;
 }
 
 .check-box {
@@ -245,5 +249,17 @@ form input {
 }
 
 .padding-20b {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.category-payment-cards {
+  justify-content: start;
+}
+
+.category-payment-card {
+  padding-top: 5vh;
+}
+
+.height-100 {
+  height: 100%;
 }
