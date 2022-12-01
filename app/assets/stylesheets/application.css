@@ -167,10 +167,12 @@ form input {
   background-color: var(--primary-main);
   font-weight: 700;
   color: var(--white);
+  cursor: pointer;
 }
 
 .sign-up-links {
   gap: 0;
+  cursor: pointer;
 }
 
 .card {
