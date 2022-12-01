@@ -243,3 +243,7 @@ form input {
   font-size: 3rem;
   font-weight: 700;
 }
+
+.padding-20b {
+  padding-bottom: 20px;
+}
