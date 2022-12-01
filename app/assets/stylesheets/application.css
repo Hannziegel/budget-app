@@ -238,3 +238,8 @@ form input {
   color: var(--primary-text);
   font-weight: 100;
 }
+
+.back-icon {
+  font-size: 3rem;
+  font-weight: 700;
+}

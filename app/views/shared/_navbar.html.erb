@@ -1,5 +1,10 @@
 <div class="navbar flex" data-controller="toggle">
-  <a data-action="click->toggle#menu" class="home-menu">Menu</a>
+  <% if current_page?(categories_path) %>
+    <a data-action="click->toggle#menu" class="home-menu">Menu</a>
+  <% end %>
+  <% if(params.has_key?(:id)) %>
+    <%= link_to "<", categories_path, class: "flex back-icon" %>
+  <% end %>
   <% if user_signed_in? %>
     <ul class="nav_bar__links">
       <div>
