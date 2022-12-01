@@ -23,5 +23,8 @@
   <% end %>
   <div>
   </div>
-  <%= render "shared/menu" %>
+
+  <% if user_signed_in? %>
+    <%= render "shared/menu" %>
+  <% end %>
 </div>

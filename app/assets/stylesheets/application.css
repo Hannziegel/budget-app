@@ -63,7 +63,7 @@ button {
   padding: 2vh 5vw;
   border: none;
   background-color: var(--primary-second);
-  color: var(--black);
+  color: var(--white);
 }
 
 a {
@@ -213,4 +213,28 @@ form input {
 .home-menu {
   display: block;
   cursor: pointer;
+}
+
+.splash-title {
+  padding: 20px;
+  padding-top: 20vh;
+  font-size: 4rem;
+  font-family: var(--font-family-splash);
+  color: var(--primary-text);
+}
+
+.splash-links {
+  padding-top: 15vh;
+}
+
+.splash-log {
+  background-color: var(--primary-main);
+  color: var(--white);
+  padding: 2.5vh 30vw;
+}
+
+.splash-sign {
+  padding: 20px;
+  color: var(--primary-text);
+  font-weight: 100;
 }

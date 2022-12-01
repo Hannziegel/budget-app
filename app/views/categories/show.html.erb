@@ -1,13 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="flex-column all-vh container-y">
-  <div class="flex-column">
+  <div class="flex-column container">
     <div>
       <%= render @category %>
       <%= button_to "Destroy this category", @category, method: :delete, class: "destroy-btn"%>
     </div>
-    <div class="flex-column">
-      <span> Payments: </span>
+    <div class="flex-column container">
+      <h2 class="flex"> Payments: </h2>
       <%= render @payments %>
     </div>
   </div>
