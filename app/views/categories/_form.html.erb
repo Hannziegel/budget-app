@@ -23,7 +23,10 @@
 
     <div>
       <%= form.label :icon, style: "display: block" %>
-      <%= form.text_field :icon %>
+      <%= form.select :icon, [ ['🍺'], ['🍔'], ['💪'], ['🐺'], ['🐱'],
+                               ['✈'], ['💅'], ['🎮'], ['💊'], ['🩺'],
+                               ['💘'], ['💰'], ['💼'],[ '🎵'], ['🧦'] ]
+      %>
     </div>
 
     <%= form.submit class: "submit-btn" %>
