@@ -13,3 +13,256 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+  --primary-main: #3778c2;
+  --primary-second: #5fb523;
+  --primary-text: #434b54;
+  --body-color: #f3f3f3;
+  --black: #000;
+  --white: #fff;
+  --red: rgba(233, 22, 22, 0.836);
+  --font-family-main: 'Proxima Nova', sans-serif;
+  --font-family-splash: 'Lobster', cursive, sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: var(--font-family-main);
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+main {
+  height: 90vh;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: var(--primary-text);
+}
+
+button {
+  width: 100%;
+  padding: 2vh 5vw;
+  border: none;
+  background-color: var(--primary-second);
+  color: var(--white);
+}
+
+a {
+  align-self: center;
+  color: var(--black);
+}
+
+form input {
+  border: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 1px 1px 1px 1px #484849;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.alert-notice {
+  gap: 0;
+}
+
+.container {
+  padding: 0 8vw;
+}
+
+.container-y {
+  padding-top: 15vh;
+}
+
+.container-category-show {
+  height: 100%;
+}
+
+.navbar {
+  background-color: var(--primary-main);
+  padding: 0 8vw;
+  height: 10vh;
+  box-shadow: 0 2px 5px 2px var(--primary-text);
+  z-index: 10;
+}
+
+.navbar * {
+  color: var(--white);
+}
+
+.headline {
+  font-weight: 700;
+}
+
+.general-text {
+  font-weight: 300;
+}
+
+.log-out-btn,
+.destroy-btn {
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+.add-btn {
+  width: 100vw;
+  padding: 20px;
+  justify-content: center;
+  background-color: var(--primary-second);
+  color: var(--white);
+  overflow-y: hidden;
+}
+
+.submit-btn {
+  padding: 20px;
+  background-color: var(--primary-second);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.log-in-btn {
+  padding: 10px 60px;
+  background-color: var(--primary-main);
+  font-weight: 700;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.sign-up-links {
+  gap: 0;
+  cursor: pointer;
+}
+
+.card {
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.check-box {
+  color: var(--black);
+}
+
+.check-box-text {
+  white-space: nowrap;
+  text-size-adjust: auto;
+}
+
+.red {
+  color: var(--red);
+  font-weight: bolder;
+}
+
+.side-menu {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  background-color: var(--primary-main);
+  color: white;
+  height: 90vh;
+  width: 40vw;
+}
+
+.side-menu * {
+  color: var(--white);
+}
+
+.user-photo {
+  background-color: gray;
+  box-shadow: 0 0 5px 5px var(--white);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-top: 5vh;
+}
+
+.home-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.splash-title {
+  padding: 20px;
+  padding-top: 20vh;
+  font-size: 4rem;
+  font-family: var(--font-family-splash);
+  color: var(--primary-text);
+}
+
+.splash-links {
+  padding-top: 15vh;
+}
+
+.splash-log {
+  background-color: var(--primary-main);
+  color: var(--white);
+  padding: 2.5vh 30vw;
+}
+
+.splash-sign {
+  padding: 20px;
+  color: var(--primary-text);
+  font-weight: 100;
+}
+
+.back-icon {
+  font-size: 1.75rem;
+}
+
+.padding-20b {
+  padding-bottom: 10px;
+}
+
+.category-payment-cards {
+  justify-content: start;
+}
+
+.category-payment-card {
+  padding-top: 5vh;
+}
+
+.height-100 {
+  height: 100%;
+}
