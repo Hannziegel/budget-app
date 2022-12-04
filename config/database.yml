@@ -6,19 +6,23 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   host: <%= ENV['POSTGRES_HOST'] %>
-  username: <%= ENV['POSTGRES_USER'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  username: <%= POSTGRES_USER='rodrigo' %>
+  password: <%= POSTGRES_PASSWORD='RFCupIwMkP900fJn8H5nqnzwiozGYmsd' %>
 
 development:
   <<: *default
   database: <%= ENV['POSTGRES_DB'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 test:
   <<: *default
   database:  <%= ENV['POSTGRES_TEST_DB'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 production:
   <<: *default
-  database: <%= ENV['POSTGRES_DB'] %>
-  username: <%= ENV['POSTGRES_USER'] %>
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
