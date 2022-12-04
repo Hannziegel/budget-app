@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.create(name: 'Test_name', email: 'test_email@gmail.com', password: 'testpassword', password_confirmation: 'testpassword')
+    @user = User.create(name: 'Test_name', email: 'test_email@gmail.com', password: 'testpassword',
+                        password_confirmation: 'testpassword')
   end
 
   it 'User should have valid name attribute' do

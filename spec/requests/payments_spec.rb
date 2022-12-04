@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe '/payments', type: :request do
-
   let(:valid_attributes) do
     'Add a hash of attributes valid for your model'
   end
