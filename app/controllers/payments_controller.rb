@@ -24,7 +24,7 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to payment_url(@payment), notice: 'Payment was successfully created.' }
+        format.html { redirect_to categories_path, notice: 'Payment was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
