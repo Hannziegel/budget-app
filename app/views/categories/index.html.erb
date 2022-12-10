@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="categories" class="flex-column container-y height-100">
+  <div class="flex-column">
+    <% @categories.each do |category| %>
+      <%= link_to category do %>
+        <%= render category %>
+      <% end %>
+    <% end %>
+  </div>
+  <%= link_to "New category", new_category_path, class: "add-btn flex" %>
+</div>

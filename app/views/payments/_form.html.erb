@@ -1,0 +1,44 @@
+<div class="container-y container padding-20b">
+  <%= form_with(model: payment, class: "form") do |form| %>
+    <% if payment.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+        <ul>
+          <% payment.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <h1>New payment</h1>
+
+    <%= form.hidden_field :user_id, value: current_user.id %>
+
+    <div>
+      <%= form.label :name, style: "display: block" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :amount, style: "display: block" %>
+      <%= form.number_field :amount, step: 0.01  %>
+    </div>
+
+    <div class="flex check-box">
+      <%= form.collection_check_boxes :category_ids, Category.where(user_id: current_user.id), :id, :name do |b| %>
+        <%= b.label class:"label-checkbox" do%>
+          <div class="check-box-item flex">
+            <%=b.check_box %>
+            <span class="check-box-text"><%=b.text %></span>
+          </div>
+        <%end%>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.submit class: "submit-btn" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,15 @@
+<div id="<%= dom_id payment %>" class="card">
+  <div class="flex">
+    <h3>
+      <%= payment.name %>
+    </h3>
+    <p style="color: red; font-weight:700;">
+      <strong>$</strong>
+      <%= payment.amount %>
+    </p>
+  </div>
+
+  <p>
+    <%= payment.created_at.strftime('%a, %e %b %Y - %H:%M') %>
+  </p>
+</div>

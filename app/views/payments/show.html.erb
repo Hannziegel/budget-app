@@ -1,0 +1,7 @@
+<div class="flex-column container-category-show">
+  <div class="container container-y">
+    <p style="color: green" class="flex"><%= notice %></p>
+    <%= render @payment %>
+    <%= button_to "Destroy this payment", @payment, method: :delete, style: "background-color: red" %>
+  </div>
+</div>
